@@ -37,7 +37,9 @@ app.post('/api/user', async (req, res) => {
     res.json({ userId: user._id, fullName: user.fullName, branch: user.branch });
   } catch (err) {
     console.error('Error creating user:', err);
-    res.status(500).json({ error: 'Failed to create user' });
+    res.status(500).json({
+      error: err && err.message ? err.message : 'Failed to create user',
+    });
   }
 });
 
