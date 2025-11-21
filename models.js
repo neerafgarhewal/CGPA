@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   branch: {
     type: String,
     required: true,
-    enum: ['CSE', 'ECE', 'ME', 'CE', 'BT', 'CHE', 'EE', 'Other'],
+    enum: ['CSE', 'ECE', 'ME', 'CE', 'BT', 'CHE', 'CH', 'EE', 'EP', 'ICDT', 'Other'],
   },
   createdAt: {
     type: Date,
