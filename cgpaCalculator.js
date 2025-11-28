@@ -47,13 +47,13 @@ function calculateCgpa(input) {
 
   // Extended MA101 thresholds (down to 4 grade point)
   const ma_thresholds = [
-    [75.0, 10],
+    [78.0, 10],
     [70.0, 9],
-    [65.0, 8],
-    [59.0, 7],
-    [54.0, 6],
-    [49.0, 5],
-    [44.0, 4],
+    [60.0, 8],
+    [50.0, 7],
+    [35.0, 6],
+    [30.0, 5],
+    // [30.0, 0],
   ];
   const ma_grade = gradeFromThresholds(ma_total, ma_thresholds);
   totalGradePoints += ma_grade * 3.0;
@@ -128,12 +128,12 @@ function calculateCgpa(input) {
   // Extended GE104 thresholds
   const ge104_thresholds = [
     [120.0, 10],
-    [115.0, 9],
-    [100.0, 8],
-    [80.0, 7],
-    [70.0, 6],
-    [60.0, 5],
-    [50.0, 4],
+    [105, 9],
+    [90, 8],
+    [65.0, 7],
+    [50.0, 6],
+    // [60.0, 5],
+    // [50.0, 4],
   ];
   const ge104_grade = gradeFromThresholds(ge_total, ge104_thresholds);
   totalGradePoints += ge104_grade * 3.0;
